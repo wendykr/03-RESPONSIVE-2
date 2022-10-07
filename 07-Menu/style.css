@@ -1,0 +1,101 @@
+/* intuitivnejsi box-sizing */
+*, :after, :before { box-sizing: border-box; }
+
+body {
+	font: 24px/1 sans-serif;
+}
+
+/* ---------------------------------------------------- */
+
+/*
+	Nakóduj stránku podle obrázku zadani-ukolu.jpg.
+	Rozložení stránky se mění v breakpointech:
+	- 640px
+	- 1000px
+*/
+
+
+/*
+	Jsem na tebe hodný a už jsem ti připravil
+	základní styl pro logo a pro odkazy.
+*/
+.hlavicka {
+	padding: 10px;
+	border: 1px solid silver;
+}
+
+.logo {
+	font-weight: bold;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	background-color: #f0f0f0;
+	color: #e74c3c;
+	display: block;
+	padding: 10px 20px;
+}
+
+a:hover {
+	background-color: #e74c3c;
+	color: white;
+}
+
+.menu ul  {
+	padding: 0;
+}
+
+.menu ul li {
+	list-style-type: none;
+	text-align: center;
+}
+
+li + li {
+	margin-top: 2px;
+}
+
+.menu {
+	margin-top: 20px;
+}
+
+@media screen and (min-width: 640px) {
+	li + li {
+		margin-top: 0;
+	}
+
+	.menu ul {
+		display: flex;
+		gap: 2px;
+	}
+
+	li {
+		flex: 0 0 25%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.menu {
+		margin-top: 0;
+	}
+
+	.hlavicka {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	ul {
+		margin: 0;
+	}
+
+	.menu ul {
+		display: flex;
+		gap: 2px;
+	}
+
+	li {
+		flex: 0 0 auto;
+	}
+
+}
